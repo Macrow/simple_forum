@@ -1,0 +1,8 @@
+- if can? :manage, Section
+  .tool.right= link_to 'New Section', new_section_path
+- if can? :manage, User
+  .tool.right= link_to 'All Users', users_path
+  %br/
+  .clear
+= render @sections
+

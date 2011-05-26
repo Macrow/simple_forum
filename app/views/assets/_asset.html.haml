@@ -1,0 +1,14 @@
+= div_for asset do
+  .left
+    - if asset.image?
+      = image_tag(asset.asset_url, :size => "24x24")
+    - else
+      = image_tag("upload_file.gif", :size => "24x24")
+  .left.file_size= "(#{asset.file_size/1024} KB)"
+  .operation
+    - if asset.image?
+      .left.tool= link_to_function "Insert", "KE.insertHtml('kind_editor', '#{image_tag(asset.asset_url)}')"
+    - else
+      .left.tool= link_to_function "Insert", "KE.insertHtml('kind_editor', '#{link_to image_tag('upload_file.gif'), asset.asset_url}')"
+    .left.tool= link_to "Delete", [current_user, asset], :method => :delete, :confirm => "Are you sure?", :remote => true
+

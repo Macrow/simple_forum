@@ -1,0 +1,16 @@
+<%= javascript_include_tag "jquery.min.js" %>
+<% if @asset.valid? %>
+<script type="text/javascript">
+  $(function() {
+    $(this).parents('#assets').append("Fuck");
+    $("#assets", parent.document).append("<%= escape_javascript(render @asset) %>");
+    $("#assets_tool", parent.document).append("<%= escape_javascript(render 'assets/form_link') %>");
+    $("#new_asset", parent.document).remove();
+  });
+</script>
+<% else %>
+<script type="text/javascript">
+  alert("Invalid Format!");
+</script>
+<% end %>
+

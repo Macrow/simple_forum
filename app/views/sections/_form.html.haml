@@ -1,0 +1,17 @@
+= form_for @section do |f|
+  -if @section.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@section.errors.count, "error")} prohibited this forum from being saved:"
+      %ul
+        - @section.errors.full_messages.each do |msg|
+          %li= msg
+
+  .title
+    .left= f.label :title
+    .left= f.text_field :title
+    .clear
+  = f.label :description
+  = f.text_area :description, :class => "kind_editor", :id => "kind_editor"
+  = f.submit 'Save'
+= render "shared/editor"
+

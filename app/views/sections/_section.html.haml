@@ -1,0 +1,9 @@
+= div_for section do
+  .title
+    .left= section.title
+    - if can? :manage, Forum
+      .tool.left= link_to "edit", edit_section_path(section)
+      .tool.left= link_to "delete", section, :method => :delete, :confirm => "Are you sure?"
+      .tool.right= link_to "New Forum", new_section_forum_path(section)
+  = render section.forums
+

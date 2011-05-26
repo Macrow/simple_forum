@@ -1,0 +1,13 @@
+$("#post_<%= @post.id %> .edit_area").remove();
+$("#post_<%= @post.id %> .content").append("<div class='edit_area'><%= escape_javascript(render "form") %></div>");
+
+KE.init({
+  id: 'kind_editor<%= @post.id %>',
+  width: "100%",
+  height: "180px",
+  resizeMode: 1,
+  allowUpload: false
+});
+
+KE.create('kind_editor<%= @post.id %>');
+

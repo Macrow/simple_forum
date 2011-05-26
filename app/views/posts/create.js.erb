@@ -1,0 +1,7 @@
+<% if @post.valid? %>
+  $("#topic_posts_content").append("<%= escape_javascript(render @post) %>");
+  KE.html('kind_editor', '');
+<% else %>
+  alert("Please enter some text...");
+<% end %>
+

@@ -1,0 +1,11 @@
+.body
+  .image= image_tag "folder_lock.gif"
+  .name
+    .left= link_to user.user_name, user
+    - if can? :manage, user
+      .left.tool= link_to "Delete", user, :method => :delete, :confirm => "Are you sure?"
+  .email= user.email
+  .register= user.created_at.to_date
+  .ip= user.last_sign_in_ip
+  .clear
+

@@ -1,0 +1,26 @@
+.topic_posts
+  #topic_posts_content
+    .topic
+      .author= user_info(@topic.user)
+      .content
+        .title= @topic.title
+        .top
+          .right= "Published at #{@topic.created_at.to_date}"
+          - if can? :update, @topic
+            .left.tool= link_to "Edit", edit_topic_path(@topic)
+          - if can? :manage, @topic
+            .left.tool= link_to "Delete", @topic, :method => :delete, :confirm => "Are you sure?"
+          .clear
+        - if @topic.created_at != @topic.updated_at
+          .updated= "Updated at #{@topic.updated_at.to_date}"
+        .topic_content= raw @topic.content
+      .clear
+    = render @posts
+  - if can? :create, Post
+    .post
+      .author= user_info(current_user)
+      .content
+        = render 'posts/form'
+      .clear
+= paginate @posts
+

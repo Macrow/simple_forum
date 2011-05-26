@@ -1,0 +1,5 @@
+= div_for post do
+  .author= user_info(post.user)
+  .content= render :partial => "posts/post_body", :locals => {:post => post}
+  .clear
+

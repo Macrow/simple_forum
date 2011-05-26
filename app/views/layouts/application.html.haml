@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %title SimpleForum
+    = stylesheet_link_tag "simple_forum"
+    = javascript_include_tag :defaults
+    = yield :head
+    = csrf_meta_tag
+  %body
+    #header
+      .container
+        %h1
+          = link_to "simple_forum", root_path
+        .user_links
+          = user_links
+    #content
+      .container
+        - flash.each do |key,msg|
+          = content_tag :div, msg, :class => key
+        .nav_path= show_nav_path
+        = yield
+    #footer
+      .container
+        .footer_description simple_forum is based on Ruby on Rails 3
+

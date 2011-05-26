@@ -1,0 +1,12 @@
+.edit_area
+  .top
+    .right= "Post at #{post.created_at.to_date}"
+    - if can? :update, post
+      .left.tool= link_to "Edit", edit_post_path(post), :remote => true
+    - if can? :manage, post
+      .left.tool= link_to "Delete", post, :method => :delete, :confirm => "Are you sure?", :remote => true
+    .clear
+  - if post.created_at != post.updated_at
+    .updated= "Updated at #{post.updated_at.to_date}"
+  .body= raw post.content
+

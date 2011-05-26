@@ -1,0 +1,22 @@
+.body
+  .topic_image= link_to show_icon_by_post(topic.last_post, "folder_new.gif", "folder_common.gif"), topic, :target => "_blank"
+  .title
+    .left= link_to topic.title, topic
+    - if can? :manage, topic
+      .tool= link_to "Delete", topic, :method => :delete, :confirm => "Are you sure?"
+  .author
+    = link_to topic.user.user_name, topic.user
+    %br/
+    .date= topic.created_at.to_date
+  .count
+    = topic.posts.size
+    .date= topic.browse_count
+  .post
+    - if post = topic.last_post
+      = link_to post.user.user_name, post.user
+      .date= link_to(time_ago_in_words(post.updated_at), topic_path(post.topic_id)+"#post_#{post.id}")
+    - else
+      N/A
+      .date N/A
+  .clear
+

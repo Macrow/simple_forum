@@ -1,0 +1,5 @@
+= form_for [@user, @asset], :remote => true, :html => {:multipart => true, :target => "upload_target#{@asset.id}"} do |f|
+  = f.file_field :asset
+  %iframe{:id => "upload_target#{@asset.id}", :name => "upload_target#{@asset.id}", :src => "", :style => "width:0;height:0;border:0px solid #fff;"}
+  = f.submit 'Upload'
+

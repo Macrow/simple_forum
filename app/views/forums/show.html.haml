@@ -1,0 +1,22 @@
+.forum_top
+  .title
+    %h2= @forum.title
+    .left.description.edit= "[#{@forum.topics.size} Topics / #{@forum.posts.size} Posts]"
+    - if can? :update, @forum
+      .edit.tool= link_to 'Edit', edit_forum_path(@forum)
+  .clear
+  .description= raw @forum.description
+  .left= paginate @topics
+  - if can? :create, Topic
+    .right.tool= link_to 'New Topic', new_forum_topic_path(@forum)
+  .clear
+.forum_body
+  .top
+    .title Title
+    .author Author
+    .count Reply/Browse
+    .post Last Post
+    .clear
+  = render @topics
+  = paginate @topics
+

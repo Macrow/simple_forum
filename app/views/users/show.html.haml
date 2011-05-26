@@ -1,0 +1,22 @@
+.topic_posts
+  #topic_posts_content
+    .topic
+      .author= user_info(@user)
+      .content
+        = "User Name : #{@user.user_name}"
+        %br/
+        = "Email : #{@user.email}"
+        %br/
+        = "Sign in Count : #{@user.sign_in_count}"
+        %br/
+        = "Current sign in ip : #{@user.current_sign_in_ip}"
+        %br/
+        = "Current sign in at : #{@user.current_sign_in_at.to_date}"
+        %br/
+        = "Last sign in ip : #{@user.last_sign_in_ip}"
+        %br/
+        = "Last sign in at : #{@user.last_sign_in_at.to_date}"
+        %br/
+        = "Created at : #{@user.created_at.to_date}"
+      .clear
+

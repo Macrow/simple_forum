@@ -1,0 +1,16 @@
+= div_for forum do
+  .forum_image= show_icon_by_post(forum.last_post, "forum_new.gif", "forum.gif")
+  .forum_title
+    = link_to forum.title, forum
+    .forum_description= raw forum.description
+  .forum_topic= "#{forum.topics.size} Topics"
+  .forum_post= "#{forum.posts.size} Posts"
+  .forum_last
+    - if post = forum.last_post
+      = link_to(post.user.user_name, post.user)
+      .date= link_to(time_ago_in_words(post.updated_at), topic_path(post.topic_id)+"#post_#{post.id}")
+    - else
+      N/A
+      .date N/A
+  .clear
+

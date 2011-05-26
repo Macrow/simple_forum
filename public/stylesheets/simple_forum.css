@@ -1,0 +1,454 @@
+body {
+  background-color: #eee;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.clear {
+  clear: both;
+}
+
+.notice {
+  margin-bottom: 10px;
+  background: green;
+  padding: 10px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.alert {
+  margin-bottom: 10px;
+  background: blue;
+  padding: 10px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.error {
+  margin-bottom: 10px;
+  background: red;
+  padding: 10px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+
+.tool a {
+  background: #aaa;
+  color: #fff;
+  font-size: 0.7em;
+  padding: 1px 3px;
+  margin: 0 2px;
+}
+
+.tool a:hover {
+  background: #999;
+  text-decoration: none;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.asset {
+  border: 1px dashed #999;
+  padding: 2px;
+  margin: 3px;
+  background: #eee;
+  height: 26px;
+  font-size: 0.9em;
+}
+
+.asset .operation {
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.asset .file_size {
+  margin: 5px;
+  padding: 0 5px;
+}
+
+/* ============================  Container ==================================*/
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.container h1 {
+  margin: 5px 0 0 10px;
+  float: left;
+}
+
+#header {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+}
+
+#header .user_links {
+  font-size: 0.8em;
+  float: right;
+  margin: 30px 10px 0 0;
+}
+
+#content {
+  width: 100%;
+  background: #fff;
+  min-height: 550px;
+  min-width: 980px;
+  margin: 0 auto;
+}
+
+#footer {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  height: 50px;
+}
+
+/* ============================  Section ==================================*/
+
+.section {
+  margin: 5px 0;
+  padding: 0;
+}
+
+.section .title {
+  background: #eee;
+  padding: 5px 5px 5px 15px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  height: 20px;
+}
+
+
+/* ============================  Users ==================================*/
+
+.users_body .top {
+  background: #eee;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.users_body .top .name {
+  float: left;
+  width: 280px;
+  overflow: hidden;
+}
+
+.users_body .top .email {
+  float: left;
+  width: 220px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.users_body .top .register {
+  float: left;
+  width: 220px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.users_body .top .ip {
+  float: left;
+  width: 220px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.users_body .body {
+  padding: 8px 5px 5px 5px;
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 20px;
+}
+
+.users_body .body .image {
+  float: left;
+  width: 20px;
+  overflow: hidden;
+}
+
+.users_body .body .name {
+  float: left;
+  width: 260px;
+  overflow: hidden;
+}
+
+.users_body .body .email {
+  float: left;
+  width: 220px;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px dotted #ccc;
+}
+
+.users_body .body .register {
+  float: left;
+  width: 220px;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px dotted #ccc;
+}
+
+.users_body .body .ip {
+  float: left;
+  width: 220px;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px dotted #ccc;
+}
+
+/* ============================  Forum ==================================*/
+
+.forum {
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 5px 10px;
+}
+
+.forum .forum_image {
+  width: 40px;
+  float: left;
+}
+
+.forum .forum_title {
+  width: 535px;
+  float: left;
+  padding-top: 5px;
+}
+
+.forum .forum_topic, .forum_post {
+  text-align: center;
+  padding-top: 8px;
+  border-left: 1px dotted #ccc;
+  width: 120px;
+  float: left;
+  min-height: 30px;
+}
+
+.forum .forum_last {
+  text-align: center;
+  padding-top: 8px;
+  border-left: 1px dotted #ccc;
+  width: 120px;
+  float: left;
+  min-height: 30px;
+}
+
+.forum .forum_last .date {
+  font-size: 0.8em;
+  color: #999;
+  margin-top: -2px;
+}
+
+.forum .forum_description {
+  font-size: 0.7em;
+  color: #ccc;
+  overflow: hidden;
+}
+
+.forum_top {
+  margin-bottom: 5px;
+}
+
+.forum_top .title h2{
+  margin: 0;
+  float: left;
+}
+
+.forum_top .edit {
+  padding: 5px;
+}
+
+.forum_top .description {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.forum_body .top {
+  background: #eee;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.forum_body .top .title {
+  float: left;
+  width: 620px;
+  overflow: hidden;
+}
+
+.forum_body .top .author {
+  float: left;
+  width: 120px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.forum_body .top .count {
+  float: left;
+  width: 80px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.forum_body .top .post {
+  float: left;
+  width: 120px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.forum_body .body {
+  padding: 8px 5px 5px 5px;
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 20px;
+}
+
+.forum_body .body .topic_image {
+  float: left;
+  width: 22px;
+  overflow: hidden;
+}
+
+.forum_body .body .title {
+  float: left;
+  width: 600px;
+  overflow: hidden;
+}
+
+.forum_body .body .author {
+  float: left;
+  width: 120px;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px dotted #ccc;
+  margin-top: -6px;
+}
+
+.forum_body .body .count {
+  float: left;
+  width: 80px;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px dotted #ccc;
+  margin-top: -6px;
+}
+
+.forum_body .body .date {
+  font-size: 0.8em;
+  color: #999;
+  margin-top: -2px;
+}
+
+.forum_body .body .post {
+  float: left;
+  width: 120px;
+  overflow: hidden;
+  text-align: center;
+  border-left: 1px dotted #ccc;
+  margin-top: -6px;
+}
+
+/* ============================  Topic and Post ==================================*/
+
+.topic_posts {
+  background: #eee;
+}
+
+.topic_posts .topic {
+  border: 1px solid #ccc;
+}
+
+.topic_posts .topic .title {
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.topic_posts .post {
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.topic_posts .author {
+  float: left;
+  width: 160px;
+  padding: 10px;
+
+}
+
+.topic_posts .content {
+  float: left;
+  width: 757px;
+  border-left: 1px solid #ccc;
+  min-height: 200px;
+  background: #fff;
+  padding: 5px 10px;
+}
+
+.topic_posts .content .top {
+  height: 20px;
+  border-bottom: 1px dashed #ccc;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.topic_posts .content .updated {
+  background: #eee;
+  border: 1px dotted #ccc;
+  color: #999;
+  height: 20px;
+  margin: 10px;
+  font-size: 0.9em;
+  padding: 5px 5px 0 5px;
+}
+
+.topic_posts .content .body {
+  margin: 10px;
+}
+
+.nav_path {
+  margin-bottom: 5px;
+}
+
+.footer_description {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* ============================  User ==================================*/
+
+.user_info {
+  text-align: center;
+}
+
+.user_info .name a {
+  font-weight: bold;
+}
+

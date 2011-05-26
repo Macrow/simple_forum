@@ -1,0 +1,7 @@
+<% if @post.valid? %>
+  $("#post_<%= @post.id %> .edit_area").remove();
+  $("#post_<%= @post.id %> .content").append("<div class='edit_area'><%= escape_javascript(render :partial => "posts/post_body", :locals => {:post => @post}) %></div>");
+<% else %>
+  alert("You must enter some text!");
+<% end %>
+
